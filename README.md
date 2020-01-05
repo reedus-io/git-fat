@@ -1,4 +1,7 @@
-# Introduction
+# git-fat+
+
+This is a fork of the original repository. Original codebase is upgraded to support Python 3 and added AWS S3 as a storage option.
+
 Checking large binary files into a source repository (Git or otherwise) is a bad idea because repository size quickly becomes unreasonable.
 Even if the instantaneous working tree stays manageable, preserving repository integrity requires all binary files in the entire project history, which given the typically poor compression of binary diffs, implies that the repository size will become impractically large.
 Some people recommend checking binaries into different repositories or even not versioning them at all, but these are not satisfying solutions for most workflows.
@@ -36,6 +39,14 @@ Set a remote store for the fat objects by editing `.gitfat`.
 
     [rsync]
     remote = your.remote-host.org:/share/fat-store
+
+To use an Amazon S3 bucket as the storage backend, you should first install the
+[AWS CLI](https://aws.amazon.com/cli/) and have it on your PATH. Your `.gitfat`
+configuration would look like this:
+
+    [s3]
+    bucket = your-s3-bucket-name
+    prefix = owner/repo
 
 This file should typically be committed to the repository so that others
 will automatically have their remote set. This remote address can use
