@@ -1,6 +1,7 @@
 # git-fat+
 
 This is a fork of the original repository. Original codebase is upgraded to support Python 3 and added AWS S3 as a storage option.
+Integration tests for both RSYNC and AWS S3 are also Dockerized.
 
 ## Quick Start
 
