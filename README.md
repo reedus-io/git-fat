@@ -6,7 +6,7 @@ Integration tests for both RSYNC and AWS S3 are also Dockerized.
 ## Quick Start
 
 ```bash
-sudo curl -L https://raw.githubusercontent.com/rootstream/git-fat/master/git-fat -o /usr/local/bin/git-fat
+sudo curl -L https://raw.githubusercontent.com/reedus-io/git-fat/master/git-fat -o /usr/local/bin/git-fat
 sudo chmod +x /usr/local/bin/git-fat
 ```
 
